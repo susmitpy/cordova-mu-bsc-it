@@ -20,6 +20,11 @@ var app = {
     // Application Constructor
     initialize: function() {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+        document.getElementById("add").addEventListener("click",add);
+        document.getElementById("sub").addEventListener("click",sub);
+        document.getElementById("mul").addEventListener("click",mul);
+        document.getElementById("div").addEventListener("click",div);
+        document.getElementById("power").addEventListener("click",power);
     },
 
     // deviceready Event Handler
@@ -44,3 +49,58 @@ var app = {
 };
 
 app.initialize();
+
+function getN1(){
+    return parseInt(document.getElementById("n1").value);
+}
+
+function getN2(){
+    return parseInt(document.getElementById("n2").value);
+}
+
+function ans(a){
+    alert("Answer: " + a);
+}
+
+function add(){
+    ans(getN1()+getN2());
+}
+
+function sub(){
+    ans(getN1()-getN2());
+}
+
+function mul(){
+    ans(getN1()*getN2());
+}
+
+function div(){
+    ans(getN1()/getN2());
+}
+
+function dialogAlert(ans){
+    var title = "ANSWER";
+    var mssg = ans;
+    var btnName = "Alright!";
+    navigator.notification.alert(mssg,cb,title,btnName);
+
+    function cb(){}
+}
+
+function power(){
+    var title = "OPTION";
+    var mssg = "Number: ";
+    var btnLbls = ["SQUARE","CUBE"];
+    var defTxt = "";
+    navigator.notification.prompt(mssg,cb,title,btnLbls,defTxt);
+
+    function cb(res){
+        var n = parseInt(res.input1);
+        if (res.buttonIndex == 1){
+            dialogAlert(n*n);
+        }
+        else{
+            dialogAlert(n*n*n);
+        }
+    }
+}

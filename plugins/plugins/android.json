@@ -1,0 +1,30 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.cordova.plugs"
+    },
+    "cordova-plugin-vibration": {
+      "PACKAGE_NAME": "io.cordova.plugs"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "io.cordova.plugs"
+    },
+    "cordova-plugin-device-motion": {
+      "PACKAGE_NAME": "io.cordova.plugs"
+    },
+    "cordova-plugin-globalization": {
+      "PACKAGE_NAME": "io.cordova.plugs"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "io.cordova.plugs"
+    }
+  },
+  "dependent_plugins": {}
+}
